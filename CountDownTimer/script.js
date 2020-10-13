@@ -3,11 +3,14 @@ const hoursElement = document.getElementById('hours');
 const minsElement = document.getElementById('mins');
 const secondsElement = document.getElementById('seconds');
 
-const endtime = 'January 1, 2021 GMT+02:00';
+const endtime = 'January 1, 2021 00:00:00';
 
 const countDown = (endtime) => {
     //We get the total millisecs between current time and our set endtime
-    const total = Date.parse(endtime) - Date.parse(new Date());
+    //It take daylight saving in consideration, so if it seems 1 hour off
+    //then thats the reason for it
+    const total = (Date.parse(endtime)) - Date.parse(new Date());
+
     /*  We get the seconds by dividing 1000 with the total.
         Using the modulo, the result only can be between 0-59
         Also we have to floor it because we dont need fractions of secs */
@@ -28,6 +31,7 @@ const countDown = (endtime) => {
 function formatTime(time){
     return time < 10 ? `0${time}` : time;
 }
+
 
 //initial call, so when we enter the site, we dont have to wait 1000ms
  countDown(endtime)
