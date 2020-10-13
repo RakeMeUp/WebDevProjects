@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+* {
+    box-sizing: border-box;
+
+}
+body {
+    background-image: url(/WebDevProjects/CountDownTimer/img/artiom-vallat-MM2HVZoWx9M-unsplash.jpg);
+    background-size: cover;
+    background-position: center center;
+    font-family: "Oswald", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: white;
+}
+
+.countdown-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-top: 8rem;
+    text-align: center;
+}
+
+.big-text {
+    font-size: 6rem;
+    line-height: 1;
+    margin: 0 2rem;
+}
+
+.countdown-el {
+    text-align: center;
+}
+
+.countdown-el span {
+    font-size: 1.5rem;
+}
