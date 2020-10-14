@@ -4,5 +4,5 @@
 
 ### Projects (VanillaJS)
 
-- #### [CountDownTimer](https://competent-shaw-e3a5ca.netlify.app/)
-
+- ##### [CountDownTimer](https://competent-shaw-e3a5ca.netlify.app/)
+- ##### [ColorFlipper](https://quirky-noyce-195dd1.netlify.app/)
