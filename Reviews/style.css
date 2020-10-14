@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+
+*{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+img{
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 50%;
+    box-shadow: 10px -5px lightskyblue;
+}
+
+body{
+    background-color: rgb(223, 241, 239);
+    text-align: center;
+    margin:  3% 10%;
+    display: flex;
+    justify-content: center;
+}
+.title{
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h2{
+    padding: 0;
+    margin: 0;
+    letter-spacing: 5px;
+    word-spacing: 10px;
+
+}
+.review{
+    background-color: white;
+    box-shadow: 0px 10px 30px black;
+    padding-top: 1em;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.underline{
+    margin-bottom: 2em;
+    width: 100px;
+    height: 4px;
+    background-color: lightskyblue;
+}
+
+#info{
+    line-height: 1.5em;
+    letter-spacing: 0.5px;
+    padding: 0px 2em 1em;
+}
+
+#job{
+    color: lightskyblue;
+    font-size: 1.3em;
+    margin: 0;
+}
+
+#author{
+    font-size: 1.5em;
+    margin: 0;
+    padding-bottom: 2px;
+    padding-top: 10px;
+    letter-spacing: 2px;
+    word-spacing: 8px;
+}
+
+.prev, .next{
+    font-size: 3em;
+    background-color: transparent;
+    border: none;
+    color: lightskyblue;
+    outline: none;
+}
+
+.prev:hover, .next:hover{
+    color: rgb(150, 165, 184);
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+
+}
+
+.random-button{
+    width: 100px;
+    height: 30px;
+    margin-bottom: 2em;
+    border-radius: 10px;
+    border: 2px solid lightskyblue;
+    font-size: 1em;
+    background-color: rgb(246, 250, 255);
+    color: lightskyblue;
+    font-weight: bold;
+    outline: none;
+}
+
+.random-button:hover{
+    background-color: lightskyblue;
+    color: white;
+    transition: ease 0.3s;
+}
