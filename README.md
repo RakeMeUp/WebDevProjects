@@ -9,3 +9,4 @@
 
 ### Slighlty bigger projects (VanillaJS)
 - ##### [CountDownTimer](https://competent-shaw-e3a5ca.netlify.app/)
+- ##### [Reviews](https://festive-fermi-af1a1b.netlify.app/)
