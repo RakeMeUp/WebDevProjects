@@ -3,7 +3,7 @@ const reviews = [
         id: 1,
         name: "Lola Moana",
         job: "Web Developer",
-        img: "img/img2.png",
+        img: "img/img3.jpg",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel eleifend lorem, imperdiet eleifend dui. Ut mollis, nulla eu tempor. "
     },
     {
