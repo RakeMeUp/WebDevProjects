@@ -13,8 +13,10 @@ $(window).ready(function () {
   });
 
   $(document).on('mouseup touchend', function () {
-    sleep(50);
-    setImgToDefault();
+    setTimeout(() => {
+      setImgToDefault()
+    }, 50);
+    
   });
 
   $(document).on('keydown', function (e) {
@@ -57,13 +59,3 @@ $(window).ready(function () {
     $('#imgL').attr('src', 'img/upL.png');
     $('#imgR').attr('src', 'img/upR.png');
   };
-
-  function sleep(milliseconds) {
-    const date = Date.now();
-    let currentDate = null;
-    do {
-      currentDate = Date.now();
-    } while (currentDate - date < milliseconds);
-  }
-
-});
