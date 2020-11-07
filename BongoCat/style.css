@@ -20,7 +20,7 @@ body{
 }
 
 .bongo-btn {
-    border: 3px solid white;
+    border: 3px solid rgba(255, 255, 255, 0.5);
     background-color: transparent;
     padding: 2.5em;
     margin: 5px;
@@ -50,16 +50,16 @@ body{
 
 #bongo-img-container{
     position: absolute;
-    top: -160px;
-    left: -80px;
-    -moz-transform:rotate(10deg);
-    -webkit-transform:rotate(10deg);
-    -ms-transform:rotate(10deg);
-    transform: rotate(10deg); 
+    top: -170px;
+    left: -120px;
+    -moz-transform:rotate(11deg);
+    -webkit-transform:rotate(11deg);
+    -ms-transform:rotate(11deg);
+    transform: rotate(11deg); 
 }
 
 #imgBongo{
-    width: 120%;
+    width: 550px;
 }
 
 #imgR{
@@ -77,12 +77,23 @@ body{
     }
 
     .img-container{
-        left: -50px;
+        left: -10px;
         top: -135px;
     }
 
     .bongo-btn{
-        padding: 4em;
+        padding: 2em;
+    }
+    #bongo-img-container{
+        top: -125px;
+        left: -35px;
+    }
+    
+    #imgBongo{
+        width: 400px;
+    }
+    .bongo-container{
+        margin-left: 10px;
     }
 
 }
