@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(window).ready(function () {
   lowLag.init({'urlPrefix':'sounds/'});
   lowLag.load(["bongo0.mp3", "bongo0.wav"], "bongo0")
   lowLag.load(["bongo1.mp3", "bongo1.wav"], "bongo1")
@@ -42,8 +42,7 @@ $(document).ready(function () {
   });
   
   document.addEventListener('touchend', function(){
-    $('#imgL').attr('src', 'img/upL.png');
-    $('#imgR').attr('src', 'img/upR.png');
+    setImgToDefault();
   });
 
   let AFired = false;
