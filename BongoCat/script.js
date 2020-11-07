@@ -24,6 +24,7 @@ $(window).ready(function () {
       lowLag.play('bongo0');
       AFired = true;
       $('#imgL').attr('src', 'img/hitL.png');
+
     }else if(key === 'D' && DFired === false){
       lowLag.play('bongo1');
       DFired = true;
