@@ -60,5 +60,8 @@ body{
     .bongo-btn{
         padding: 4em;
     }
+    .bongo-container{
+        rotate: 12deg;
+    }
 
 }

@@ -1,52 +1,20 @@
+lowLag.init({'urlPrefix':'sounds/'});
+lowLag.load(["bongo0.mp3", "bongo0.wav"], "bongo0")
+lowLag.load(["bongo1.mp3", "bongo1.wav"], "bongo1")
+
 $(window).ready(function () {
-  lowLag.init({'urlPrefix':'sounds/'});
-  lowLag.load(["bongo0.mp3", "bongo0.wav"], "bongo0")
-  lowLag.load(["bongo1.mp3", "bongo1.wav"], "bongo1")
 
-  function playSoundSwapPic(targetId){
-    if(targetId == 'bongo0'){
-      $('#imgL').attr('src', 'img/hitL.png');
-      lowLag.play('bongo0');
-    }else if (targetId == 'bongo1'){
-      $('#imgR').attr('src', 'img/hitR.png');
-      lowLag.play('bongo1')
-    }
-  };
-  
-  function setImgToDefault(){
-    $('#imgL').attr('src', 'img/upL.png');
-    $('#imgR').attr('src', 'img/upR.png');
-  };
+  let AFired, DFired = false;
 
-  $('.bongo-btn').on('mousedown', function (e) {
+  $('.bongo-btn').on('mousedown touchstart', function (e) {
+    e.preventDefault();
     let targetId = e.currentTarget.id;
     playSoundSwapPic(targetId);
   });
 
-  $(document).on('mouseup', function () {
+  $(document).on('mouseup touchend', function () {
     setImgToDefault();
   });
-
-  let btn0 = document.getElementById('bongo0');
-  btn0.addEventListener("touchstart", function(e){
-    e.preventDefault();
-    $('#imgL').attr('src', 'img/hitL.png');
-    lowLag.play('bongo1');
-  });
-
-  let btn1 = document.getElementById('bongo1');
-  btn1.addEventListener("touchstart", function(e){
-    e.preventDefault();
-    $('#imgR').attr('src', 'img/hitR.png');
-    lowLag.play('bongo1');
-  });
-  
-  document.addEventListener('touchend', function(){
-    setImgToDefault();
-  });
-
-  let AFired = false;
-  let DFired = false;
 
   $(document).on('keydown', function (e) {
     e.preventDefault();
@@ -67,11 +35,25 @@ $(window).ready(function () {
     if(e.key.toUpperCase() == 'A'){
       $('#imgL').attr('src', 'img/upL.png');
       AFired = false;
-      console.log(AFired)
     } else if (e.key.toUpperCase() == 'D'){
       $('#imgR').attr('src', 'img/upR.png');
       DFired = false;
     }
   });
+
+  function playSoundSwapPic(targetId){
+    if(targetId == 'bongo0'){
+      $('#imgL').attr('src', 'img/hitL.png');
+      lowLag.play('bongo0');
+    }else if (targetId == 'bongo1'){
+      $('#imgR').attr('src', 'img/hitR.png');
+      lowLag.play('bongo1')
+    }
+  };
+  
+  function setImgToDefault(){
+    $('#imgL').attr('src', 'img/upL.png');
+    $('#imgR').attr('src', 'img/upR.png');
+  };
 
 });
