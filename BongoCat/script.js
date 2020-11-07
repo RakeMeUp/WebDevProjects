@@ -4,14 +4,19 @@ lowLag.load(["bongo1.mp3", "bongo1.wav"], "bongo1")
 
 $(window).ready(function () {
 
+  //setting up flags
   let AFired, DFired = false;
 
-  $('.bongo-btn').on('mousedown touchstart', function (e) {
+  $('.bongo-btn').on('mousedown touchstart', function (e) {7
+    //prevents doubleclick
+    e.preventDefault();
+    //gets id of clicked obj
     let targetId = e.currentTarget.id;
     playSoundSwapPic(targetId);
   });
 
   $(document).on('mouseup touchend', function () {
+    //small delay, to elongate hitting animation
     setTimeout(() => {
       setImgToDefault()
     }, 50);
@@ -19,17 +24,19 @@ $(window).ready(function () {
   });
 
   $(document).on('keydown', function (e) {
+    //prevents accidental escaping the document, like tabbing, alt, etc.
     e.preventDefault();
-    let key = e.key.toUpperCase();
+    //makes CapsLock state irrelevant
+    let keyPressed = e.key.toUpperCase();
 
-    if(key === 'A' && AFired === false){
-      lowLag.play('bongo0');
+    if(keyPressed === 'A' && AFired === false){
       AFired = true;
+      lowLag.play('bongo0');
       $('#imgL').attr('src', 'img/hitL.png');
 
-    }else if(key === 'D' && DFired === false){
-      lowLag.play('bongo1');
+    }else if(keyPressed === 'D' && DFired === false){
       DFired = true;
+      lowLag.play('bongo1');
       $('#imgR').attr('src', 'img/hitR.png');
     }
   });
@@ -44,18 +51,18 @@ $(window).ready(function () {
     }
   });
 
-  function playSoundSwapPic(targetId){
-    if(targetId == 'bongo0'){
-      $('#imgL').attr('src', 'img/hitL.png');
-      lowLag.play('bongo0');
-    }else if (targetId == 'bongo1'){
-      $('#imgR').attr('src', 'img/hitR.png');
-      lowLag.play('bongo1')
-    }
-  };
-  
-  function setImgToDefault(){
-    $('#imgL').attr('src', 'img/upL.png');
-    $('#imgR').attr('src', 'img/upR.png');
-  };
+    function playSoundSwapPic(targetId){
+      if(targetId == 'bongo0'){
+        $('#imgL').attr('src', 'img/hitL.png');
+        lowLag.play('bongo0');
+      }else if (targetId == 'bongo1'){
+        $('#imgR').attr('src', 'img/hitR.png');
+        lowLag.play('bongo1')
+      }
+    };
+    
+    function setImgToDefault(){
+      $('#imgL').attr('src', 'img/upL.png');
+      $('#imgR').attr('src', 'img/upR.png');
+    };
 });
