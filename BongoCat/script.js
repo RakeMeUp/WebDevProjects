@@ -10,10 +10,10 @@ $(window).ready(function () {
     e.preventDefault();
     let targetId = e.currentTarget.id;
     playSoundSwapPic(targetId);
-    sleep(50);
   });
 
   $(document).on('mouseup touchend', function () {
+    sleep(50);
     setImgToDefault();
   });
 
