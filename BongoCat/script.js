@@ -18,15 +18,33 @@ $(document).ready(function () {
     $('#imgR').attr('src', 'img/upR.png');
   };
 
-  $('.bongo-btn').mousedown(function (e) {
+  $('.bongo-btn').on('mousedown', function (e) {
     let targetId = e.currentTarget.id;
     playSoundSwapPic(targetId);
   });
 
-  $(document).mouseup(function () {
+  $(document).on('mouseup', function () {
     setImgToDefault();
   });
 
+  let btn0 = document.getElementById('bongo0');
+  btn0.addEventListener("touchstart", function(e){
+    e.preventDefault();
+    $('#imgL').attr('src', 'img/hitL.png');
+    lowLag.play('bongo1');
+  });
+
+  let btn1 = document.getElementById('bongo1');
+  btn1.addEventListener("touchstart", function(e){
+    e.preventDefault();
+    $('#imgR').attr('src', 'img/hitR.png');
+    lowLag.play('bongo1');
+  });
+  
+  document.addEventListener('touchend', function(){
+    $('#imgL').attr('src', 'img/upL.png');
+    $('#imgR').attr('src', 'img/upR.png');
+  });
 
   let AFired = false;
   let DFired = false;
