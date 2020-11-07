@@ -10,6 +10,7 @@ $(window).ready(function () {
     e.preventDefault();
     let targetId = e.currentTarget.id;
     playSoundSwapPic(targetId);
+    sleep(50);
   });
 
   $(document).on('mouseup touchend', function () {
@@ -56,5 +57,13 @@ $(window).ready(function () {
     $('#imgL').attr('src', 'img/upL.png');
     $('#imgR').attr('src', 'img/upR.png');
   };
+
+  function sleep(milliseconds) {
+    const date = Date.now();
+    let currentDate = null;
+    do {
+      currentDate = Date.now();
+    } while (currentDate - date < milliseconds);
+  }
 
 });
