@@ -16,7 +16,7 @@ body{
 
 .container{
     position: relative;
-    margin-top: 400px;
+    margin-top: 320px;
 }
 
 .bongo-btn {
@@ -70,6 +70,10 @@ body{
 @media only screen and (max-width: 600px){
     img{
         width: 200px;
+    }
+
+    .container{
+        margin-top: 400px;
     }
 
     #imgR{

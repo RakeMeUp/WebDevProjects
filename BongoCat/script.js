@@ -7,7 +7,6 @@ $(window).ready(function () {
   let AFired, DFired = false;
 
   $('.bongo-btn').on('mousedown touchstart', function (e) {
-    e.preventDefault();
     let targetId = e.currentTarget.id;
     playSoundSwapPic(targetId);
   });
@@ -59,3 +58,4 @@ $(window).ready(function () {
     $('#imgL').attr('src', 'img/upL.png');
     $('#imgR').attr('src', 'img/upR.png');
   };
+});
