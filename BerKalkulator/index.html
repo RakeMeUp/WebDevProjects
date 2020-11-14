@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../jquery.js"></script>
+			  
+	<link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <form>
+        <div class="input-container">
+            <div>
+                <label for="bruttoBer">Bruttó órabér</label>
+                <input type="number" id="bruttoBer" value="0">
+            </div>
+            <div>
+                <label for="nappal">Nappalok száma</label>
+                <input type="number" id="nappal" value="0">
+            </div>
+            <div>
+                <label for="ejszaka">Éjszakák száma</label>
+                <input type="number" id="ejszaka" value="0">
+            </div>
+            <div>
+                <label for="toNappal">Túlóra Nappalok száma</label>
+                <input type="number" id="toNappal" value="0">
+            </div>
+            <div>
+                <label for="toEjszaka">Túlóra Éjszakák száma</label>
+                <input type="number" id="toEjszaka" value="0"   >
+            </div>
+        </div>
+        <div class="radio-container">
+            <input type="radio" name="muszak" id="folyamatos" value="folyamatos" checked="checked">
+            <label for="folyamatos">Folyamatos Műszak</label>
+            <input type="radio" name="muszak" id="3muszak" value="3muszak">
+            <label for="3muszak">3 Műszakos</label>
+        </div>
+        <button type="submit" id="submit">Enter</button>
+    </form>
+    <div class="table-container">
+    <h2>Fizetés</h2>
+
+        <table style="width:100%">
+        <tr>
+            <th>Napok</th>
+            <th>Fizetés műszakokra bontva</th> 
+            <th>Havi Fizetés</th>
+        </tr>
+        <tr>
+            <td>Nappal</td>
+            <td id="nappalTable"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Éjszaka</td>
+            <td id="ejszakaTable"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Túlóra nappal</td>
+            <td id="toNappalTable"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Túlóra éjszaka</td>
+            <td id="toEjszakaTable"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td id="sumTable"></td>
+        </tr>
+        </table>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
