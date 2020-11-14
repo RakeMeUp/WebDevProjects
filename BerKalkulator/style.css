@@ -101,3 +101,17 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+@media only screen and (max-width: 500px) {
+    body{
+        font-size: 14px;
+    }
+    .container{
+        max-width: 300px;
+    }
+
+    .input-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+  }
