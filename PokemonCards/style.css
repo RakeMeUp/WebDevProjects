@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+
+.header{
+    top:0;
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    width: 250px;
+    justify-content: space-between;
+}
+
+body{
+    padding-top: 110px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Goldman', cursive;
+    background-image: linear-gradient(180deg, #a36d6f 25%, #8a5e56 25%, #8a5e56 50%, #a36d6f 50%, #a36d6f 75%, #8a5e56 75%, #8a5e56 100%);
+    background-size: 40.00px 40.00px;
+}
+
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    min-width: 450px;
+    justify-content: space-around;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: aquamarine;
+    border-radius: 15px;
+    box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.75);
+    margin: 5px;
+    padding: 5px;
+    width: 200px;
+    position: relative;
+    z-index: 1;
+}
+
+.name{
+    font-size: 20px;
+}
+
+img{
+    user-select: none;
+}
+
+.idNumber{
+    font-family: 'Goldman', cursive;
+    font-weight: 700;
+    position: absolute;
+    top: 40px;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 200px;
+    font-size: 7em;
+    color: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+    transform: scaleY(2.5);
+    user-select: none;
+}
+
+.above100{
+    top: 50px;
+    font-size: 5.5em;
+    transform: scaleY(3);
+}
+
+button{
+    padding: 20px;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+}
