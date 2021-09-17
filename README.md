@@ -10,6 +10,7 @@
 ### Slighlty bigger projects (VanillaJS)
 - ##### [CountDownTimer](https://competent-shaw-e3a5ca.netlify.app/)
 - ##### [Reviews](https://festive-fermi-af1a1b.netlify.app/)
+- ##### [PokeCards](https://ecstatic-villani-6adfe0.netlify.app/)
 
 ### Kinda complicated projects
 - ##### [BongoCat (javaScript, jQuery, lowLagJs)](https://sad-feynman-a187fd.netlify.app/)
