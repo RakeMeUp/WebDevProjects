@@ -1,58 +1,74 @@
-$(document).ready(function () {
-    let countObject = {countNumber:1};
-    let iterationEnd = 20;
-    let flagToScroll = false;
+$(document).ready(()=>{
+
+    let cache = {};
+    let count = 0;
+
+    const getPokemons = (offset = 0) =>{
+        for(let i = 1; i <= offset + 200; i++){
+            $.ajax({
+                url: `https://pokeapi.co/api/v2/pokemon/${i}`,
+                success: (response)=>{
+                    cache[response.id] = {
+                        name    : response.name,
+                        imgSrc  : response.sprites.front_default,
+                        id      : response.id
+                    }
+                }                
+            })
+        }
+    }
+
+    getPokemons();
+
+
+
+    $(window).scroll(function(){
+        toScroll = $(document).height() - $(window).height() - 250;
+        if ( $(this).scrollTop() > toScroll && flagToScroll == true) {
+            loadCards(20)
+        }
+
+
+    });
+
+    $('#Show').on('mousedown', function () { 
+        flagToScroll = true;
+        loadCards(20)
+     });  
+
+    $('#Reset').on('click', function(){
+        $('#container').empty();
+        flagToScroll = false;
+        count = 0
+    }); 
 
     const capitalize = (s) => {
         if (typeof s !== 'string') return ''
         return s.charAt(0).toUpperCase() + s.slice(1)
     }
-      
-    $('#Show').on('mousedown', function () { 
-        loadCards();
-        flagToScroll = true;
-     });  
 
-    $('#Reset').on('click', function(){
-        $('#container').empty();
-        countObject = {countNumber:1};
-        iterationEnd = 20;
-        flagToScroll = false;
-    });
+    console.log(cache)
 
-    $(window).scroll(function(){
-        toScroll = $(document).height() - $(window).height() - 250;
-        if ( $(this).scrollTop() > toScroll && flagToScroll == true) {
-            loadCards();
+    const loadCards = (cardNum) =>{
+        for(let i = 1; i <= cardNum; i++){
+            $('#container')             .append(`<div id="pokemon${i + count}" class="card"></div>`)
+            
+            $(`#pokemon${i + count}`)   .append(`<img src="${cache[i + count].imgSrc}">`)
+                                        .append(`<span class="idNumber">${cache[i + count].id}</span>`)
+                                        .append(`<span class="name">${capitalize(cache[i + count].name)}</span>`)
+
+            $('.idNumber')              .slice( 99 ).addClass('above100');
+            
+        }   
+
+        count += 20;
+        console.log(count)
+        if(count % 100 == 0){
+            getPokemons(count);
+            console.log("gettin more")
         }
-    });
+        
+    }
 
-    function loadCards() {
-
-        let pokeURL = "https://pokeapi.co/api/v2/pokemon/";
-
-        for (let i = countObject.countNumber; i <= iterationEnd; i++) {
-            //ajax method so we can set it to synchronous
-            $.ajax({
-
-                type: "GET",
-                url: pokeURL + i,
-                //needs to be synchronous so it dont messes up the order
-                async: false,
-                success: function (response) {
-                    $('#container').append(`<div id="pokemon${i}" class="card">
-                                            </div>`);
-
-                    $(`#pokemon${i}`)    .append(`<img src="${response.sprites.front_default}">`)
-                                                .append(`<span class="idNumber">${response.id}</span>`)
-                                                .append(`<span class="name">${capitalize(response.name)}</span>`)
-                    $('.idNumber').slice( 99 ).addClass('above100');
-
-                }
-            });
-            countObject.countNumber++;
-        }
-        /* console.log(countObject.countNumber) */
-        iterationEnd += 20;
-    };
-});
+    
+})
