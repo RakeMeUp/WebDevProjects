@@ -47,13 +47,11 @@ $(document).ready(()=>{
         return s.charAt(0).toUpperCase() + s.slice(1)
     }
 
-    console.log(cache)
-
     const loadCards = (cardNum) =>{
         for(let i = 1; i <= cardNum; i++){
             $('#container')             .append(`<div id="pokemon${i + count}" class="card"></div>`)
             
-            $(`#pokemon${i + count}`)   .append(`<img src="${cache[i + count].imgSrc}">`)
+            $(`#pokemon${i + count}`)   .append(`<a href="https://pokemon.fandom.com/wiki/${cache[i + count].name}" target="_blank"><img src="${cache[i + count].imgSrc}" width="200px" height="200px" ></a>`)
                                         .append(`<span class="idNumber">${cache[i + count].id}</span>`)
                                         .append(`<span class="name">${capitalize(cache[i + count].name)}</span>`)
 
