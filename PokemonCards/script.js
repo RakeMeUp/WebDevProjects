@@ -4,7 +4,7 @@ $(document).ready(()=>{
     let count = 0;
 
     const getPokemons = (offset = 0) =>{
-        for(let i = 1; i <= offset + 200; i++){
+        for(let i = 1; i <= offset + 500; i++){
             $.ajax({
                 url: `https://pokeapi.co/api/v2/pokemon/${i}`,
                 success: (response)=>{
@@ -40,6 +40,7 @@ $(document).ready(()=>{
         $('#container').empty();
         flagToScroll = false;
         count = 0
+        $('#modal').removeClass("loading")
     }); 
 
     const capitalize = (s) => {
@@ -63,10 +64,15 @@ $(document).ready(()=>{
         console.log(count)
         if(count % 100 == 0){
             getPokemons(count);
+            $('#modal').addClass("loading")
+            setTimeout(()=>{
+                $('#modal').removeClass("loading")
+            }, 1000)
+
+
             console.log("gettin more")
         }
         
     }
-
     
 })
