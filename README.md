@@ -1,6 +1,6 @@
 # WebDevProjects
 
-Projects to train myself for the mighty Web Dev life
+Focusing mainly on the coding side of webdev
 
 ## Smoll Projects (VanillaJS)
 
