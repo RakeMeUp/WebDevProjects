@@ -3,7 +3,7 @@ const hoursElement = document.getElementById('hours');
 const minsElement = document.getElementById('mins');
 const secondsElement = document.getElementById('seconds');
 
-const endtime = 'January 1, 2021 00:00:00';
+const endtime = 'January 1, 2022 00:00:00';
 
 const countDown = (endtime) => {
     //We get the total millisecs between current time and our set endtime
