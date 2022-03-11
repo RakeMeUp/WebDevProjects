@@ -2,7 +2,7 @@
 
 Focusing mainly on the coding side of webdev
 
-## Smoll Projects (VanillaJS)
+## introductory Projects ( Javascript )
 
 - ### [ColorFlipper](https://quirky-noyce-195dd1.netlify.app/)
 ![ColorFlipper](https://i.ibb.co/BjKwfCr/K-perny-k-p-2021-11-24-211246.png "Random Color Generator")
@@ -16,7 +16,7 @@ Focusing mainly on the coding side of webdev
 - ### [Reviews](https://festive-fermi-af1a1b.netlify.app/)
 ![Reviews](https://i.ibb.co/Pjy41V7/K-perny-k-p-2021-11-24-211517.png "Simple Reviews Section")
 
-## Slighlty bigger projects (VanillaJS)
+## Smoll projects ( Javascript )
 
 - ### [PokeCards (API Calls)](https://ecstatic-villani-6adfe0.netlify.app/)
 ![PokeCards](https://i.ibb.co/g7bY2Qk/K-perny-k-p-2021-11-24-211532.png "Pokemon API Cards")
@@ -25,6 +25,5 @@ Focusing mainly on the coding side of webdev
 - ### [BongoCat (javaScript, jQuery, lowLagJs)](https://sad-feynman-a187fd.netlify.app/)
 ![BongoCat](https://i.ibb.co/8YDV954/K-perny-k-p-2021-11-24-211556.png "Bongo Cat")
 
-# Copied Popular Landing Pages
-
-- ## [Landing Sites repo](https://github.com/RakeMeUp/static_sites)
+# Current project I'm working on:
+- ### [React + Tailwind Kcal-List-Calculator](https://github.com/RakeMeUp/kcal-counter)
