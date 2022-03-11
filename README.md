@@ -27,3 +27,4 @@ Focusing mainly on the coding side of webdev
 
 # Current project I'm working on:
 - ### [React + Tailwind Kcal-List-Calculator](https://github.com/RakeMeUp/kcal-counter)
+![site](https://camo.githubusercontent.com/d35de3502381506a5d7d2c848e4ed890ed50853ad8611c285db9b9ca613b1ca2/68747470733a2f2f692e696d6775722e636f6d2f54333277744f622e706e67)
